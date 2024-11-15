@@ -224,15 +224,15 @@ let dropInterval = 1000;
 let lastTime = 0;
 
 document.addEventListener("keydown", (event) => {
-  if (event.keyCode === 37) {
+  if (event.key === "a" || event.key === "A") { // Mover a la izquierda
     playerMove(-1);
-  } else if (event.keyCode === 39) {
+  } else if (event.key === "d" || event.key === "D") { // Mover a la derecha
     playerMove(1);
-  } else if (event.keyCode === 40) {
+  } else if (event.key === "s" || event.key === "S") { // Mover hacia abajo
     playerDrop();
-  } else if (event.keyCode === 81) {
+  } else if (event.key === "q" || event.key === "Q") { // Rotar en sentido antihorario
     playerRotate(-1);
-  } else if (event.keyCode === 87) {
+  } else if (event.key === "w" || event.key === "W") { // Rotar en sentido horario
     playerRotate(1);
   }
 });
